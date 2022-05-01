@@ -32,17 +32,40 @@
       <button id="multinav">Flip multiple coins</button>
       <button id="guessnav">Guess the result</button>
     </nav>
-    <div id="home">
-      
-    </div>    
+    <div id="home">Flip coins, choose the following:
+      <li>Single flip</li>
+      <li>Multiple flip</li>
+      <li>Guess flip</li>
+    </div> 
+
     <div id="single" class="hidden">
-      
+      <button id="coin" onclick="singleFlip()">Single Flip</button>
+      <p >Front or Back:<span id="result"></span></p>
+      <img src="assets/img/coin.png" id="single">
     </div>
+
     <div id="multi" class="hidden">
-      
+      <form id="coins">
+				<label for="number"><strong>How many?</strong></label>
+				<input type="number" name="CoinCounts" id="CoinCounts">
+				<input type="submit" value="Multiple flips">
+			</form>
+      <span>Your Results Are:</span>
+      <p id="heads">heads: </p>
+			<p id="tails">tails: </p>
+			<ul id="coinlist">
+			  <li>
+			    <img src="assets/img/coin.png" class="bigcoin"> 
+        </li>
     </div>
+
     <div id="guess" class="hidden">
-      
+      <button id="guessHead" onclick="guessHeads('heads')">head</button>
+      <button id="guessTail" onclick="guessTails('tails')">tail</button>
+      <p id="guess">your guess: </p>
+      <img src="assets/img/coin.png" id="guess">
+      <p id="guessWhat">actually happened: </p>
+      <img src="assets/img/coin.png" id="actual">
     </div>
 	<script src="main.js"></script>
   </body>
